@@ -34,7 +34,6 @@ async def add_shipping(request):
         return json({'post': 'shipping_list'})
 
 
-# @app.route('/get/<id:uuid>')
 @app.route('/get')
 async def get_shipping(request):
     cmd = commands.GetShipping(id_=id[0])
@@ -43,19 +42,19 @@ async def get_shipping(request):
     return json(result)
 
 
-# @app.route('/update', methods=['POST'])
-# async def update_shipping(request):
-#     cmd = commands.Update_date_to_ship(
-#         shipping=
-#         date_to_ship='2019'
-#     )
-#     uow = ShippingUnitOfWork()
-#     before = shipping_list
-#     await messagebus.handle(cmd, uow)
-#     print('The updated list is ')
-#     print(shipping_list)
-#     bo = shipping_list.__hash__() == before.__hash__()
-#     return json({'updated': bo})
+@app.route('/update', methods=['POST'])
+async def update_shipping(request):
+    cmd = commands.Update_date_to_ship(
+        shipping=
+        date_to_ship='2019'
+    )
+    uow = ShippingUnitOfWork()
+    before = shipping_list
+    await messagebus.handle(cmd, uow)
+    print('The updated list is ')
+    print(shipping_list)
+    bo = shipping_list.__hash__() == before.__hash__()
+    return json({'updated': bo})
 
 
 if __name__ == '__main__':

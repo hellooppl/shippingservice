@@ -49,3 +49,61 @@ def shipping_factory(
         date_to_shi=date_to_ship,
         is_deleted=is_deleted
     )
+
+
+class Delivery(BaseModel):
+    user: UUID
+    name: str
+    post: str
+    permission: str
+    available:bool
+    task : set() = None
+    is_deleted:bool = False
+    events : Optional(List[events.Event])=[]
+
+
+    class Config:
+        title = "Delivery"
+        allow_mutations = False
+        extra = "Forbid"
+
+    def allocate(self, order:Shipping):
+        if self.available == False:
+            self.events.append(events.NotAvailable(self.user))
+            return None
+        else:
+            self.task.add(order)
+    
+    def can_deliver(self, order:Shipping) -> bool:
+        return self.available
+
+    def remove_shipping(self, order:Shipping):
+        if order in self.task:
+            self.task.remove(order)
+            self.available = True
+
+    def mark_completed(self, order:Shipping):
+        if order in self.task:
+            self.task.remove(order)
+            self.task.order.status = "Completed"
+
+
+
+def delivery_factory(
+    user: int,
+    name: str,
+    post: str,
+    permission: str,
+    available:bool,
+    task : set() = None,
+    is_deleted :bool = False
+) -> Delivery : 
+    return Delivery(
+    user= user,
+    name= name,
+    post= post,
+    permission= permission,
+    available=available,
+    task = task,
+    is_deleted=is_deleted
+    )

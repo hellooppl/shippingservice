@@ -2,7 +2,7 @@ from uuid import UUID
 
 from pydantic import BaseModel
 
-from domain.models import Shipping
+from domain.models import Shipping, Delivery
 
 
 class Command(BaseModel):
@@ -28,3 +28,19 @@ class GetShipping(Command):
 
 class Update_date_to_ship(ShippingCommand):
     date_to_ship: str
+
+
+class AddDelivery(BaseModel):
+    name: str
+    post: str
+    permission: str
+    available:bool
+    task : set() = None
+
+
+class DeliveryCommand(BaseModel):
+    delivery: Delivery
+
+class UpdateTask(DeliveryCommand):
+    _id:UUID
+    task:set()
