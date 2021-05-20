@@ -48,3 +48,33 @@ class ShippingUnitOfWork(AbstractUnitOfWork):
         for shipping in self.shipping.seen:
             while shipping.events:
                 yield self.shipping.events.pop(0)
+
+
+
+
+class DeliveryUnitOfWork(AbstractUnitOfWork):
+
+    def __init__(self) -> None:
+        self.shipping = repository.Shippingrepository([])
+        self.delivery = repository.Deliveryrepository([])
+        self.committed = False
+        
+    def __enter__(self) :
+        self.shipping = repository.ShippingRepository()
+        self.delivery = repository.Deliveryrepository()
+        return super().__init__()
+
+    def __exit__(self, *args):
+        super.__exit__(*args)
+
+    def collect_new_events(self):  
+        for single in self.delivery.seen: 
+            while single.events:
+                yield self.shipping.events.pop(0)
+
+    async def _commit(self):
+        self.committed=True
+        self.publish_events()
+
+    async def rollback(self):
+        pass  
