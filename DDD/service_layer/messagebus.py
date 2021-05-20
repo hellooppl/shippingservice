@@ -64,7 +64,7 @@ HANDLERS = {
 COMMAND_HANDLERS = {
     commands.AddShipping: services.add_shipping,
     commands.GetShipping: services.get_shipping,
-    # commands.AddDelivery: handlers.add_delivery,
+    commands.AddDelivery: services.add_delivery,
     # commands.Update_date_to_ship: services.Update_date_to_ship,
     # commands.Update_task: handlers.update_task,
 }

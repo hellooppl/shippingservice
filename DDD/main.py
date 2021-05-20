@@ -6,8 +6,8 @@ from sanic.response import HTTPResponse, json
 
 from domain import commands
 from service_layer import unit_of_work, messagebus, abstract
-from service_layer.unit_of_work import ShippingUnitOfWork
-from storage import shipping_list
+from service_layer.unit_of_work import DeliveryUnitOfWork, ShippingUnitOfWork
+from storage import shipping_list, delivery_list
 
 app = Sanic("My Hello, world app")
 id = []
@@ -45,8 +45,14 @@ async def get_shipping(request):
 @app.route('/delivery', methods=['POST'])
 async def create_agent(request):
     cmd = commands.AddDelivery(
-        
+        name="Adarsha",
+        post= "manager",
+        permission="all",
     )
+    uow = DeliveryUnitOfWork()
+    result = await messagebus.handle(cmd,uow)
+    print(delivery_list)
+    return json({'delivery agent':'added'})
 
 
 

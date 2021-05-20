@@ -2,7 +2,7 @@ import abc
 
 from typing import List, Dict
 from uuid import UUID
-from domain.models import Shipping
+from domain.models import Shipping,Delivery
 from domain import models
 from storage import shipping_list
 

@@ -1,7 +1,7 @@
 import uuid
 
 from domain import models
-from domain.commands import AddShipping, GetShipping
+from domain.commands import AddDelivery, AddShipping, GetShipping
 
 
 async def add_shipping(cmd: AddShipping) -> models.Shipping:
@@ -24,3 +24,10 @@ async def get_shipping(model: models.Shipping) -> dict:
         'insurance': model.insurance,
         'date_to_ship': model.date_to_ship
     }
+
+async def add_delivery(cmd: AddDelivery) -> models.Delivery:
+    return models.delivery_factory(
+        name=cmd.name,
+        post= cmd.post,
+        permission=cmd.permission,
+    )

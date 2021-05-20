@@ -1,4 +1,4 @@
-from adapters.repository import ShippingRepository
+from adapters.repository import Deliveryrepository, ShippingRepository
 from domain import commands
 from domain.models import Shipping
 from service_layer import abstract, handlers, unit_of_work
@@ -37,3 +37,15 @@ async def get_shipping(cmd: commands.GetShipping,
 #         )
 #         uow.shipping.update(shipping)
 #         uow.commit()
+
+
+async def add_delivery(cmd:commands.AddDelivery, 
+                        uow:unit_of_work.DeliveryUnitOfWork) -> None:
+    with uow:
+        delivery = await handlers.add_delivery(cmd)
+        repo = Deliveryrepository()
+        repo.add(delivery)
+        uow.commit()
+
+
+        

@@ -28,11 +28,9 @@ class AbstractUnitOfWork(abc.ABC):
 class ShippingUnitOfWork(AbstractUnitOfWork):
 
     def __init__(self) -> None:
-        self.shipping = repository.ShippingRepository()
         self.committed = False
 
     def __enter__(self):
-        self.shipping = repository.ShippingRepository()
         return super().__init__()
 
     def __exit__(self, *args):
@@ -55,13 +53,9 @@ class ShippingUnitOfWork(AbstractUnitOfWork):
 class DeliveryUnitOfWork(AbstractUnitOfWork):
 
     def __init__(self) -> None:
-        self.shipping = repository.Shippingrepository([])
-        self.delivery = repository.Deliveryrepository([])
         self.committed = False
         
     def __enter__(self) :
-        self.shipping = repository.ShippingRepository()
-        self.delivery = repository.Deliveryrepository()
         return super().__init__()
 
     def __exit__(self, *args):

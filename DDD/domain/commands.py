@@ -1,3 +1,4 @@
+from typing import List
 from uuid import UUID
 
 from pydantic import BaseModel
@@ -34,8 +35,6 @@ class AddDelivery(BaseModel):
     name: str
     post: str
     permission: str
-    available:bool
-    task : set() = None
 
 
 class DeliveryCommand(BaseModel):
@@ -43,4 +42,4 @@ class DeliveryCommand(BaseModel):
 
 class UpdateTask(DeliveryCommand):
     _id:UUID
-    task:set()
+    task:List[UUID]
