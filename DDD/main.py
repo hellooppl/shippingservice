@@ -1,16 +1,20 @@
+from socket import create_server
 from typing import Text
 import uuid
 
 from sanic import Sanic
+from sanic import response
 from sanic.response import HTTPResponse, json
 
 from domain import commands
-from service_layer import unit_of_work, messagebus, abstract
 from service_layer.unit_of_work import DeliveryUnitOfWork, ShippingUnitOfWork
 from storage import shipping_list, delivery_list
+from service_layer import messagebus
+
 
 app = Sanic("My Hello, world app")
 id = []
+users = []
 
 
 @app.route('/', methods=['POST', 'GET'])
@@ -45,16 +49,27 @@ async def get_shipping(request):
 @app.route('/delivery', methods=['POST'])
 async def create_agent(request):
     cmd = commands.AddDelivery(
-        name="Adarsha",
+        name=request.form.get("name") if request.form.get("name") else "adarsha",
         post= "manager",
         permission="all",
     )
     uow = DeliveryUnitOfWork()
     result = await messagebus.handle(cmd,uow)
+    print("the ddeliver yylist is ")
     print(delivery_list)
+    users.append(delivery_list[0]['user'])
     return json({'delivery agent':'added'})
 
-
+@app.route('/addtask',methods=['POST'])
+async def add_task(request):
+    cmd = commands.Allocate(
+        user=users[0],
+        task=id[0]
+    )
+    uow = DeliveryUnitOfWork()
+    result = await messagebus.handle(cmd,uow)
+    print(delivery_list)
+    return json({'updated task':'updated_task'})
 
 # @app.route('/update', methods=['POST'])
 

@@ -3,6 +3,7 @@ from typing import Optional, List, Set
 from uuid import UUID
 
 from pydantic import BaseModel
+from domain.events import NotAvailable
 
 from domain.events import Event
 
@@ -23,7 +24,7 @@ class Shipping(BaseModel):
         allow_mutations = False
 
     def __hash__(self):
-        return hash((type(self)))
+        return hash((type(self.id_)))
 
 
 def shipping_factory(
@@ -58,16 +59,22 @@ class Delivery(BaseModel):
     events : List[Event]=[]
 
 
+    def __hash__(self):
+        return hash((type(self.user)))
+        
     class Config:
         title = "Delivery"
         allow_mutations = False
 
-    def allocate(self, order:Shipping):
+    def allocate(self, order:UUID):
         if self.available == False:
-            self.events.append(Event.NotAvailable(self.user))
+            print("Event is added*********************")
+            self.events.append(NotAvailable(user=self.user))
             return None
         else:
-            self.task.add(order)
+            self.task.append(order)
+            self.available=False
+
     
     def can_deliver(self, order:Shipping) -> bool:
         return self.available
@@ -94,7 +101,7 @@ def delivery_factory(
     name= name,
     post= post,
     permission= permission,
-    available=False,
+    available=True,
     task = [],
     is_deleted=False
     )

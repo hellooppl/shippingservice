@@ -31,7 +31,7 @@ class Update_date_to_ship(ShippingCommand):
     date_to_ship: str
 
 
-class AddDelivery(BaseModel):
+class AddDelivery(Command):
     name: str
     post: str
     permission: str
@@ -40,6 +40,10 @@ class AddDelivery(BaseModel):
 class DeliveryCommand(BaseModel):
     delivery: Delivery
 
-class UpdateTask(DeliveryCommand):
-    _id:UUID
-    task:List[UUID]
+
+class Allocate(Command):
+    user:UUID
+    task:UUID
+class AddTask(DeliveryCommand):
+    user:UUID
+    task:UUID

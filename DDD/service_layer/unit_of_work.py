@@ -1,7 +1,7 @@
 import abc
+from domain.models import delivery_factory
 
 from adapters import repository
-
 
 class AbstractUnitOfWork(abc.ABC):
     repo: repository.AbstractRepository
@@ -24,51 +24,53 @@ class AbstractUnitOfWork(abc.ABC):
     def rollback(self):
         raise NotImplementedError
 
+    def collect_new_events(self):
+        for delivery in self.delivery.seen:
+            while delivery.events:
+                yield delivery.events.pop(0)
 
 class ShippingUnitOfWork(AbstractUnitOfWork):
 
-    def __init__(self) -> None:
+     def __init__(self) -> None:
+        self.shipping = repository.ShippingRepository()
+        self.delivery=self.shipping
         self.committed = False
-
-    def __enter__(self):
+        
+     def __enter__(self):
+        self.shipping = repository.ShippingRepository()
         return super().__init__()
 
-    def __exit__(self, *args):
-        super().__exit__(*args)
 
-    def _commit(self):
+    #  def __exit__(self, *args):
+    #     super().__exit__(*args)
+
+     def _commit(self):
         self.committed = True
 
-    def rollback(self):
+     def rollback(self):
         pass
-
-    def collect_new_events(self):
-        for shipping in self.shipping.seen:
-            while shipping.events:
-                yield self.shipping.events.pop(0)
-
-
 
 
 class DeliveryUnitOfWork(AbstractUnitOfWork):
 
     def __init__(self) -> None:
+        self.delivery = repository.Deliveryrepository()
         self.committed = False
         
     def __enter__(self) :
+        self.delivery = repository.Deliveryrepository()
         return super().__init__()
 
     def __exit__(self, *args):
-        super.__exit__(*args)
+        super().__exit__(*args)
 
-    def collect_new_events(self):  
-        for single in self.delivery.seen: 
-            while single.events:
-                yield self.shipping.events.pop(0)
 
-    async def _commit(self):
+
+    def _commit(self):
         self.committed=True
-        self.publish_events()
 
-    async def rollback(self):
+
+    def rollback(self):
         pass  
+
+

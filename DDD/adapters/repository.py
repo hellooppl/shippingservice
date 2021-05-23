@@ -4,7 +4,7 @@ from typing import List, Dict
 from uuid import UUID
 from domain.models import Shipping,Delivery
 from domain import models
-from storage import shipping_list
+from storage import shipping_list,delivery_list
 
 
 class AbstractRepository(abc.ABC):
@@ -12,7 +12,6 @@ class AbstractRepository(abc.ABC):
         self.seen = set()
         # seen stores which objects of the model are used during the session seen is set data type
 
-    # look at the sub class
 
     def add(self, base: models.BaseModel):
         self._add(base)
@@ -108,14 +107,27 @@ class ShippingRepository(AbstractRepository):
                 self[i]["is_deleted"] = False
             return "{user} is deleted successfully"
 
-class Deliveryrepository:
-    def get(self, user: UUID) -> Delivery:
-        delivery = {}
-        if user in delivery_list[user]:
-            batch = delivery_list[user]
-        return Delivery.construct(delivery)
+class Deliveryrepository(AbstractRepository):
+    def _get(self, user: UUID) -> Delivery:
+        for i in delivery_list:
+            if i['user'] == user:
+                ss = i
+        return Delivery.construct(**ss)
 
-    def add(self, model: Delivery):
+    def _add(self, model: Delivery):
+        values = {
+            "user": model.user,
+            "name": model.name,
+            "post": model.post,
+            "permission": model.permission,
+            "available": model.available,
+            "task": model.task,
+            "events":model.events,
+            "is_deleted":model.is_deleted
+        }
+        delivery_list.append(values)
+
+    def _update(self, model: Delivery):
         values = {
             "user": model.user,
             "name": model.name,
@@ -124,23 +136,15 @@ class Deliveryrepository:
             "available": model.available,
             "task": model.task,
         }
-        model.append(values)
 
-    def update(self, model: Delivery):
-        values = {
-            "user": model.user,
-            "name": model.name,
-            "post": model.post,
-            "permission": model.permission,
-            "available": model.available,
-            "task": model.task,
-        }
 
-        for i in range(len(self) + 1):
-            if self[i]["user"] == values.user:
-                self[i].update(values)
+        for i in delivery_list:
+            if i['user'] == model.user:
+                i['task'].append(model.task)
+                i['available']=model.available
 
-    def delete(self, model: Shipping):
+
+    def _delete(self, model: Shipping):
         values = {
             "id_": model.id_,
             "category": model.category,

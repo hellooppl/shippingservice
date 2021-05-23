@@ -1,7 +1,9 @@
 import uuid
 
+from sanic import response
+
 from domain import models
-from domain.commands import AddDelivery, AddShipping, GetShipping
+from domain.commands import AddDelivery, AddShipping, AddTask, DeliveryCommand, GetShipping
 
 
 async def add_shipping(cmd: AddShipping) -> models.Shipping:
@@ -31,3 +33,9 @@ async def add_delivery(cmd: AddDelivery) -> models.Delivery:
         post= cmd.post,
         permission=cmd.permission,
     )
+
+async def update_task(cmd:AddTask) -> models.Delivery:
+        return cmd.delivery.update({
+            'task':cmd.task
+        })
+    
