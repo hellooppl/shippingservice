@@ -1,7 +1,8 @@
 from adapters.repository import Deliveryrepository, ShippingRepository
-from domain import commands
+from domain import commands, events
 from domain.models import Shipping
 from service_layer import abstract, handlers, unit_of_work
+from adapters import redis_eventpublisher
 
 async def add_shipping(cmd: commands.AddShipping,
                        uow: unit_of_work.AbstractUnitOfWork,
@@ -54,8 +55,23 @@ async def update_task(cmd:commands.Allocate,
 
 
         
-async def not_available():
+async def not_available(event,uow):
     print()
     print("triggered")
     print("THe user is not available right ")
     return None
+
+
+async def free_user(event:events.TaskCompleted, uow:unit_of_work.AbstractUnitOfWork):
+    redis_eventpublisher.publish("task_completed", event)
+
+
+async def free_delivery(cmd:commands.FreeUser,
+                         uow:unit_of_work.DeliveryUnitOfWork) -> None:
+
+      with uow:
+        model = uow.delivery._get_user(cmd.user)
+        print(model)
+        model.free_user()
+        uow.delivery.update(model)
+        uow.commit()

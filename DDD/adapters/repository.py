@@ -108,11 +108,22 @@ class ShippingRepository(AbstractRepository):
             return "{user} is deleted successfully"
 
 class Deliveryrepository(AbstractRepository):
-    def _get(self, user: UUID) -> Delivery:
+
+    def _get_user(self,user:str) -> Delivery:
         for i in delivery_list:
+            if str(i['user'].hex)==user:
+                ss =i
+            return Delivery.construct(**ss)
+
+
+    def _get(self, user: UUID) -> Delivery:
+        for i in delivery_list:            
             if i['user'] == user:
                 ss = i
-        return Delivery.construct(**ss)
+            else:
+                if i['user'].hex ==user:
+                    ss = i
+            return Delivery.construct(**ss)
 
     def _add(self, model: Delivery):
         values = {

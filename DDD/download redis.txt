@@ -1,0 +1,32 @@
+sudo apt install redis-server
+
+sudo nano /etc/redis/redis.conf
+
+supervised systemd
+
+sudo systemctl restart redis.service
+
+sudo systemctl status redis
+
+redis-cli
+
+sudo systemctl restart redis
+
+
+
+
+bins
+sudo nano /etc/redis/redis.conf
+bind 127.0.0.1 ::1
+
+sudo netstat -lnp | grep redis
+
+
+
+sudo nano /etc/redis/redis.service
+password
+
+sudo nano /etc/redis/redis.conf
+# requirepass foobared
+uncomment and foobared to password
+

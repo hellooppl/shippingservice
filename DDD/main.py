@@ -1,6 +1,8 @@
+from adapters.redis_eventpublisher import UUIDEncoder
 from socket import create_server
 from typing import Text
 import uuid
+from pydantic.types import UUID1, UUID3
 
 from sanic import Sanic
 from sanic import response
@@ -10,6 +12,7 @@ from domain import commands
 from service_layer.unit_of_work import DeliveryUnitOfWork, ShippingUnitOfWork
 from storage import shipping_list, delivery_list
 from service_layer import messagebus
+import views
 
 
 app = Sanic("My Hello, world app")
@@ -38,12 +41,17 @@ async def add_shipping(request):
         return json({'post': 'shipping_list'})
 
 
-@app.route('/get')
-async def get_shipping(request):
-    cmd = commands.GetShipping(id_=id[0])
-    uow = ShippingUnitOfWork()
-    result = await messagebus.handle(cmd, uow)
-    return json(result)
+# Chapter 12
+@app.route('/list/<user_id>',methods=['GET'])
+async def get_list(request,user_id):
+    cmd = commands.FreeUser(
+        user=user_id
+    )
+    uow = DeliveryUnitOfWork()
+    result = await messagebus.handle(cmd,uow)
+    print('user freed.......')
+    print(delivery_list)
+    return json({'s':'s'})
 
 
 @app.route('/delivery', methods=['POST'])
@@ -71,20 +79,21 @@ async def add_task(request):
     print(delivery_list)
     return json({'updated task':'updated_task'})
 
-# @app.route('/update', methods=['POST'])
 
-# async def update_shipping(request):
-#     cmd = commands.Update_date_to_ship(
-#         shipping=
-#         date_to_ship='2019'
-#     )
-#     uow = ShippingUnitOfWork()
-#     before = shipping_list
-#     await messagebus.handle(cmd, uow)
-#     print('The updated list is ')
-#     print(shipping_list)
-#     bo = shipping_list.__hash__() == before.__hash__()
-#     return json({'updated': bo})
+# cqrs
+@app.route('/getshipping', methods=['GET'])
+async def get_shipping(request):
+    list1 = await views.get_shipping()
+    print(shipping_list)
+    return json(list1)
+
+
+@app.route('/getdelivery',methods=['GET'])
+async def get_delivery(request):
+    list1 = await views.get_delivery()
+    print(list1)
+    return json(list1)
+
 
 
 if __name__ == '__main__':

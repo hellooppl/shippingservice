@@ -47,3 +47,6 @@ class Allocate(Command):
 class AddTask(DeliveryCommand):
     user:UUID
     task:UUID
+
+class FreeUser(Command):
+    user:str

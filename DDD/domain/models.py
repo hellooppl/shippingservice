@@ -3,7 +3,7 @@ from typing import Optional, List, Set
 from uuid import UUID
 
 from pydantic import BaseModel
-from domain.events import NotAvailable
+from domain.events import NotAvailable, TaskCompleted
 
 from domain.events import Event
 
@@ -70,6 +70,7 @@ class Delivery(BaseModel):
         if self.available == False:
             print("Event is added*********************")
             self.events.append(NotAvailable(user=self.user))
+            self.events.append(TaskCompleted(user=self.user))
             return None
         else:
             self.task.append(order)
@@ -88,6 +89,10 @@ class Delivery(BaseModel):
         if order in self.task:
             self.task.remove(order)
             self.task.order.status = "Completed"
+
+    def free_user(self) -> bool:
+        self.available = True
+        return self.available
 
 
 

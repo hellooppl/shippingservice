@@ -9,3 +9,7 @@ class Event(BaseModel):
 
 class NotAvailable(Event):
     user: UUID
+
+
+class TaskCompleted(Event):
+    user: UUID

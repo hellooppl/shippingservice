@@ -1,0 +1,461 @@
+    1  python -C
+    2  python -V
+    3  python -version
+    4  python3
+    5  git 
+    6  sudo apt install git
+    7  git
+    8  git pull https://github.com/hellooppl/saniceventbus.git
+    9  git init
+   10  git pull https://github.com/hellooppl/saniceventbus.git
+   11  sudo snap install --classic code
+   12  sudo apt install software-properties-common apt-transport-https wget
+   13  sudo snap install --classic code
+   14  ls
+   15  source venv/bin/activate
+   16  pip
+   17  sanic
+   18  pip3 install sanic
+   19  sudo apt install python3-pip
+   20  pip3 install sanic
+   21  sanic
+   22  la
+   23  cd entry*
+   24  ls
+   25  sanic main.app
+   26  sudo apt install sanic
+   27  pip3 install sanic
+   28  pip3 sanic main.app
+   29  pip3 sanic 
+   30  python3 main.py
+   31  python -m install virutalenv
+   32  python3 -m install virutalenv
+   33  python3 -m venv venv
+   34  source venv/bin/activate
+   35  cd entry*
+   36  ls
+   37  python main.py
+   38  python3 main.py
+   39  pip -h
+   40  pip install virtualenv
+   41  virtualenv  venv
+   42  source venv/bin/activavte
+   43  source venv/bin/activate
+   44  pip
+   45  pip install sanic
+   46  sanic
+   47  ls
+   48  cd entrypoint*
+   49  sanic main.app
+   50  ls
+   51  cd domain
+   52  ;s
+   53  ls
+   54  from adapters import *
+   55  from ..adapters import *
+   56  ls
+   57  ..adapteres
+   58  ls ..adapteres
+   59  ls ..adapters
+   60  ls adapters
+   61  cd ..
+   62  ls
+   63  source venv/bin/activate
+   64  ls
+   65  pip list
+   66  cd entry*
+   67  sanic main.app
+   68  cd ..
+   69  ;s
+   70  from domain import commands
+   71  sanic main.app
+   72  pip install pydantic
+   73  sanic main.app
+   74  pip install tenacity
+   75  sanic main.app
+   76  cd entry*
+   77  ls
+   78  sanic main.app
+   79  git init
+   80  git add .
+   81  git commit -m "commited"
+   82  git -m  commit "commited"
+   83  git  commit -m "commited"
+   84  git add .
+   85  git commit "first"
+   86  git commit -m "first"
+   87  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+   88  /home/addy/Desktop/ss/DDD/venv/bin/python3.8 /home/addy/Desktop/ss/DDD/main.py
+   89  /home/addy/Desktop/ss/DDD/venv/bin/python3.8 /home/addy/Desktop/ss/DDD/entrypoint/main.py
+   90  /home/addy/Desktop/ss/DDD/venv/bin/python3.8 /home/addy/Desktop/ss/DDD/main.py
+   91  /home/addy/Desktop/ss/DDD/venv/bin/python3.8 /home/addy/Desktop/ss/DDD/domain/models.py
+   92  /home/addy/Desktop/ss/DDD/venv/bin/python3.8 /home/addy/Desktop/ss/DDD/main.py
+   93  /home/addy/Desktop/ss/DDD/venv/bin/python3.8 /home/addy/Desktop/ss/DDD/domain/models.py
+   94  /home/addy/Desktop/ss/DDD/venv/bin/python3.8 /home/addy/Desktop/ss/DDD/main.py
+   95  ps -fA
+   96  ps -fA | grep python
+   97  sudo lsof -i:8000
+   98  kill 41270
+   99  sudo lsof -i:8000
+  100  ps -a
+  101  /home/addy/Desktop/ss/DDD/venv/bin/python3.8 /home/addy/Desktop/ss/DDD/main.py
+  102  kill 49031
+  103  /home/addy/Desktop/ss/DDD/venv/bin/python3.8 /home/addy/Desktop/ss/DDD/main.py
+  104  kill 49045
+  105  /home/addy/Desktop/ss/DDD/venv/bin/python3.8 /home/addy/Desktop/ss/DDD/main.py
+  106  kill 49053
+  107  ls
+  108  sanic main.app
+  109  ps -A
+  110  sanic main.app
+  111  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  112  git status
+  113  git add .
+  114  git commit -a
+  115  git remote add origin https://github.com/hellooppl/shippingservice.git
+  116  git remote set_url origin https://github.com/hellooppl/shippingservice.git
+  117  git remote set_url https://github.com/hellooppl/shippingservice.git
+  118  git remote set_url --add https://github.com/hellooppl/shippingservice.git
+  119  git remote set-url origin https://github.com/hellooppl/shippingservice.git
+  120  git commit -m "commit"
+  121  git config --global user.email "palpaliadarsha@gmail.com"
+  122  git config --global user.name "hellooppl"
+  123  git commit -m "commit"
+  124  git push origin main
+  125  git add .
+  126  git commit -m "added models and commands for delivery guy"
+  127  git add .
+  128  git commit -m "added repository for delivery agent"
+  129  git add .
+  130  git commit -m "commited files in unit of work "
+  131  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  132  git add .
+  133  git commit -m "made some changes"
+  134  git push origin main
+  135  python3
+  136  sanic main.app
+  137  source venv/bin/activate
+  138  sanic main.app
+  139  ps -a
+  140  kill 49909 
+  141  sanic main.app
+  142  ps -a
+  143  sudo kill 49909
+  144  source venv/bin/activate
+  145  sanic main.app
+  146  ps -a
+  147  sudo kill 4165
+  148  \
+  149  ps -a
+  150  kill 4165
+  151  ps -a
+  152  kill PID 4165
+  153  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  154  sanic main.app
+  155  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  156  sanic main.app
+  157  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  158  sanic main.app
+  159  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  160  sanic main.app
+  161  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  162  sanic main.app
+  163  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  164  sanic main.app
+  165  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  166  sanic main.app
+  167  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  168  sanic main.app
+  169  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  170  sanic main.app
+  171  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  172  sanic main.app
+  173  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  174  sanic main.app
+  175  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  176  sanic main.app
+  177  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  178  sanic main.app
+  179  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  180  python
+  181  cd entry*
+  182  sanic main.app
+  183  pwd
+  184  export PYTHONPATH="${PYTHONPATH}:/home/addy/Desktop/ss/DDD"
+  185  sanic main.app
+  186  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  187  cd entry**
+  188  sanic main.app
+  189  cd ..
+  190  sanic main.app
+  191  python
+  192  python3
+  193  python
+  194  python3
+  195  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  196  sanic main.app
+  197  cat >> commands 
+  198  cat commands 
+  199  cat >> commands 
+  200  cat commands 
+  201  cat > commands 
+  202  cat commands 
+  203  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  204  python
+  205  pwd
+  206  export PYTHONPATH="${PYTHONPATH}:/home/addy/Desktop/ss/DDD"
+  207  python3
+  208  cd entrypoint
+  209  ls
+  210  sanic main.app
+  211  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  212  cd entrypoint
+  213  sanic main.app
+  214  python3
+  215  export PYTHONPATH="${PYTHONPATH}:/home/addy/Desktop/ss/DDD"
+  216  sanic main.app
+  217  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  218  source ~/.bash_profile 
+  219  cd
+  220  source ~/.bash_profile 
+  221  ls
+  222  cd ..
+  223  source ~/.bash_profile 
+  224  ls
+  225  cd addy
+  226  ls
+  227  cd ..
+  228  ls
+  229  cd ..
+  230  ls
+  231  ls -a
+  232  sanic main.app
+  233  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  234  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/entrypoint/main.py
+  235  deactivate
+  236  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/entrypoint/main.py
+  237  export PYTHONPATH="${PYTHONPATH}:/home/addy/Desktop/ss/DDD"
+  238  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/entrypoint/main.py
+  239  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  240  deactivate
+  241  export PYTHONPATH="${PYTHONPATH}:/home/addy/Desktop/ss/DDD"
+  242  sanic
+  243  cd entrypoint
+  244  sanic main.app
+  245  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  246  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/entrypoint/main.py
+  247  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  248  export PYTHONPATH="${PYTHONPATH}:/home/addy/Desktop/ss/DDD"
+  249  sanic main.app
+  250  cd entry*
+  251  sanic main.app
+  252  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  253  export PYTHONPATH="${PYTHONPATH}:/home/addy/Desktop/ss/DDD"
+  254  sanic main.app
+  255  cd entrypoint
+  256  sanic main.app
+  257  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  258  export PYTHONPATH="${PYTHONPATH}:/home/addy/Desktop/ss/DDD"
+  259  cd entry*
+  260  sanic main.app
+  261  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  262  cd entrypoint
+  263  sanic main.app
+  264  export PYTHONPATH="${PYTHONPATH}:/home/addy/Desktop/ss/DDD"
+  265  sanic main.app
+  266  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  267  export PYTHONPATH="${PYTHONPATH}:/home/addy/Desktop/ss/DDD"
+  268  cd entry*
+  269  sanic main.app
+  270  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  271  ls
+  272  export PYTHONPATH="${PYTHONPATH}:/home/addy/Desktop/ss/DDD"
+  273  cd entry*
+  274  sanic main.app
+  275  export PYTHONPATH="${PYTHONPATH}:/home/addy/Desktop/ss/DDD"
+  276  sanic main.app
+  277  export PYTHONPATH="${PYTHONPATH}:/home/addy/Desktop/ss/DDD"
+  278  sanic main.app
+  279  cd ..
+  280  export PYTHONPATH="${PYTHONPATH}:/home/addy/Desktop/ss/DDD"
+  281  cd e*
+  282  sanic main.app
+  283  cd ..
+  284  sanic main.app
+  285  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  286  sanic main.app
+  287  python
+  288  export PYTHONPATH="${PYTHONPATH}:/home/addy/Desktop/ss/DDD/service_layer"
+  289  sanic main.app
+  290  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  291  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  292  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  293  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  294  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  295  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  296  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  297  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  298  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  299  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  300  class Hello:
+  301  python
+  302  python3
+  303  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  304  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  305  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  306  /home/addy/Desktop/ss/DDD/venv/bin/python
+  307  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  308  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  309  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  310  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  311  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  312  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  313  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  314  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  315  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  316  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  317  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  318  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  319  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  320  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  321  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  322  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  323  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  324  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  325  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  326  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  327  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  328  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  329  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  330  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  331  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  332  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  333  python
+  334  python3
+  335  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  336  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  337  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  338  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  339  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  340  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  341  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  342  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  343  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  344  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  345  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  346  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  347  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  348  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  349  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  350  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  351  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  352  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  353  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  354  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  355  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  356  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  357  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  358  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  359  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  360  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  361  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  362  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  363  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  364  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  365  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  366  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  367  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  368  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  369  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  370  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  371  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  372  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  373  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  374  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  375  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  376  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  377  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  378  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  379  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  380  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  381  git add .
+  382  git commit -m "Event triggered"
+  383  git status
+  384  git push origin main
+  385  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  386  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/adapters/repository.py
+  387  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  388  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  389  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  390  python
+  391  python3
+  392  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  393  /home/addy/Desktop/ss/DDD/venv/bin/python /home/addy/Desktop/ss/DDD/main.py
+  394  source /home/addy/Desktop/ss/DDD/venv/bin/activate
+  395  sudo apt install redis server
+  396  sudo apt install redis-server
+  397  sudo systemctl restart redis.service
+  398  sudo systemctl status redis
+  399  sudo systemctl restart redis.service
+  400  deactivate
+  401  sudo apt install redis-server
+  402  sudo systemctl status redis
+  403  sudo nano /etc/redis/redis.conf
+  404  sudo systemctl restart redis.service
+  405  sudo systemctl start redis.service
+  406  sudo systemctl disable redis
+  407  sudo systemctl enable redis
+  408  sudo systemctl restart redis-server
+  409  sudo systemctl start redis.service
+  410  sudo systemctl unmask  redis-server.service
+  411  sudo systemctl start redis.service
+  412  sudo nano /etc/systemd/system/redis.service
+  413  sudo systemctl start redis.service
+  414  sudo systemctl daemon-reload
+  415  sudo systemctl status redis
+  416  sudo systemctl daemon-reload
+  417  sudo systemctl status redis
+  418  sudo adduser --system --group --no-create-home redis
+  419  sudo mkdir /var/lib/redis
+  420  sudo chown redis:redis /var/lib/redis
+  421  sudo chmod 770 /var/lib/redis
+  422  sudo systemctl start redis
+  423  sudo systemctl status redis
+  424  sudo apt-get purge --auto-remove redis-server
+  425  sudo apt install redis-server
+  426  sudo nano /etc/redis/redis.conf
+  427  sudo systemctl restart redis.service
+  428  sudo systemctl status redis
+  429  sudo systemctl restart redis
+  430  sudo systemctl status redis
+  431  sudo nano /etc/systemd/system/redis.service
+  432  sudo systemctl restart redis
+  433  systemctl daemon-reload
+  434  sudo systemctl restart redis
+  435  sudo systemctl status redis
+  436  sudo nano sudo nano /etc/redis/redis.conf
+  437  sudo nano /etc/redis/redis.service
+  438  sudo nano /etc/systemd/system/redis.service
+  439* sudo systemctl status redi
+  440  sudo systemctl restart redis.service
+  441  sudo systemctl daemon-reload
+  442  sudo systemctl restart redis.service
+  443  sudo systemctl status redis.service
+  444  journalctl -xe
+  445  sudo nano /etc/systemd/system/redis.service
+  446  sudo adduser --system --group --no-create-home redis
+  447  sudo chown redis:redis /var/lib/redis
+  448  sudo systemctl start redis
+  449  sudo systemctl daemon-reload
+  450  sudo systemctl start redis
+  451  sudo systemctl status redis
+  452  sudo nano /etc/systemd/system/redis.conf
+  453  sudo nano sudo nano /etc/redis/redis.conf
+  454  sudo nano /etc/systemd/system/redis.conf
+  455  sudo systemctl start redis.service
+  456  sudo systemctl status redis.service
+  457  history
+  458  history > download_redis.txt
+
+
+export PYTHONPATH="${PYTHONPATH}:/home/addy/Desktop/ss/DDD"

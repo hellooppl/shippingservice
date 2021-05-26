@@ -32,18 +32,8 @@ async def handle_event(event: events.Event,
                        uow: unit_of_work.AbstractUnitOfWork):
     # for handler in 
     handler = EVENT_HANDLERS[type(event)]
-        # try:
-        #     for attempt in Retrying(
-        #             stop=stop_after_attempt(3),
-        #             wait=wait_exponential()
-        #     ):
-        #         with attempt:
-        #             await handler(event, uow=uow)
-        #             queue.extend(uow.collect_new_events())
-        # except RetryError as retry_failure:
-        #     continue
     try:
-        re = await handler()
+        re = await handler(event,uow=uow)
         # queue.extend(uow.collect_new_events())
     except Exception:
         raise
@@ -64,7 +54,8 @@ async def handle_command(
 
 
 EVENT_HANDLERS = {
-    events.NotAvailable: services.not_available
+    events.NotAvailable: services.not_available,
+    events.TaskCompleted:services.free_user,
 }
 
 COMMAND_HANDLERS = {
@@ -73,4 +64,5 @@ COMMAND_HANDLERS = {
     commands.AddDelivery: services.add_delivery,
     # commands.Update_date_to_ship: services.Update_date_to_ship,
     commands.Allocate: services.update_task,
+    commands.FreeUser:services.free_delivery,
 }
