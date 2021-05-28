@@ -1,0 +1,6 @@
+pydantic==1.8.2
+redis==3.5.3
+requests==2.25.1
+sanic==21.3.4
+sanic-routing==0.6.2
+tenacity==7.0.0
