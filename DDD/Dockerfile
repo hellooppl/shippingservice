@@ -1,6 +1,9 @@
 FROM python:3.8
 ENV PYTHONUNBUFFERED=1
-WORKDIR /DDD
-COPY requirements.txt /DDD/
+RUN mkdir /code
+WORKDIR /code
+COPY requirements.txt /code/
 RUN pip install -r requirements.txt
-COPY . /DDD/
+RUN chmod 777 entrypoint.sh
+COPY . /code/
+ENTRYPOINT /code/entrypoint.sh
